@@ -1,0 +1,7 @@
+body {
+	background: #ededed;
+}
+.menu li {
+	display: inline-block;
+	margin: 10px;  
+}
