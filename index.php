@@ -8,13 +8,16 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
-	<link rel="stylesheet" href="estilo.css">
+	<link rel="stylesheet"
+	href="<?php bloginfo('template_url'); ?>/estilo.css">
 </head>
 <body>
 
 	<header class="container">
 		<center>
 			<img src="https://1000marcas.net/wp-content/uploads/2020/03/CNN-Forma.jpg" width="200">
+
+			<h1><?php bloginfo('name'); ?></h1>
 
 			<ul class="menu">
 				<li><a href="#">Inicio</a></li>
@@ -26,7 +29,25 @@
 	</header>
 	<section class="container">
 		<center>
-			<img src="https://elcomercio.pe/resizer/NO918sw4hdMtYs1R2vLQ6JgTTXU=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/XW6OBMERDNC2VCIXOVW4DO642M.png">
+
+
+
+
+			<?php $articulos = new WP_Query([
+								'showposts' => 3,
+							]);
+			while ($articulos->have_posts()) {
+				$articulos->the_post();
+
+				the_title();
+				echo '<hr>';
+			} ?>
+
+
+
+
+			
+			<img src="<?php bloginfo('template_url'); ?>/aldito.jpg">
 			<h2>Aldo Miyashiro pide perdón a Érika Villalobos: “No merezco todo lo que ella ha hecho por mí” [VIDEO]</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -34,7 +55,7 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<img src="https://elcomercio.pe/resizer/NO918sw4hdMtYs1R2vLQ6JgTTXU=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/XW6OBMERDNC2VCIXOVW4DO642M.png">
+			<img src="<?php bloginfo('template_url'); ?>/aldito.jpg">
 			<h2>Aldo Miyashiro pide perdón a Érika Villalobos: “No merezco todo lo que ella ha hecho por mí” [VIDEO]</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -42,7 +63,7 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<img src="https://elcomercio.pe/resizer/NO918sw4hdMtYs1R2vLQ6JgTTXU=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/XW6OBMERDNC2VCIXOVW4DO642M.png">
+			<img src="<?php bloginfo('template_url'); ?>/aldito.jpg">
 			<h2>Aldo Miyashiro pide perdón a Érika Villalobos: “No merezco todo lo que ella ha hecho por mí” [VIDEO]</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -51,8 +72,6 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</center>
-
-
 
 
 	</section>
@@ -70,3 +89,5 @@
 
 </body>
 </html>
+
+
