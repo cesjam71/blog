@@ -37,40 +37,17 @@
 								'showposts' => 3,
 							]);
 			while ($articulos->have_posts()) {
-				$articulos->the_post();
-
-				the_title();
-				echo '<hr>';
-			} ?>
+				$articulos->the_post(); ?>
 
 
+			<?php the_post_thumbnail("medium"); ?>
+			<h2><?php the_title(); ?></h2>
+			<?php the_excerpt(); ?>
 
 
+			<?php } ?>
 			
-			<img src="<?php bloginfo('template_url'); ?>/aldito.jpg">
-			<h2>Aldo Miyashiro pide perdón a Érika Villalobos: “No merezco todo lo que ella ha hecho por mí” [VIDEO]</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<img src="<?php bloginfo('template_url'); ?>/aldito.jpg">
-			<h2>Aldo Miyashiro pide perdón a Érika Villalobos: “No merezco todo lo que ella ha hecho por mí” [VIDEO]</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<img src="<?php bloginfo('template_url'); ?>/aldito.jpg">
-			<h2>Aldo Miyashiro pide perdón a Érika Villalobos: “No merezco todo lo que ella ha hecho por mí” [VIDEO]</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
 		</center>
 
 
