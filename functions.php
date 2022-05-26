@@ -9,6 +9,10 @@ function codigo_inicial() {
 		"public" => true
 	]);
 
+	register_nav_menus([
+		'principal' => 'Zona principal'
+	]);
+
 }
 
 
